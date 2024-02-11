@@ -1,0 +1,4 @@
+#!/bin/bash
+
+COMMAND="$@"
+docker compose run --rm deploy sh -c "cd app/frontend/ && $COMMAND"
