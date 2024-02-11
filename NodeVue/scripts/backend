@@ -1,4 +1,6 @@
 #!/bin/bash
 
+source "${PWD}/.env"
+
 COMMAND="$@"
-docker compose run --rm deploy sh -c "cd app/backend/ && $COMMAND"
+docker exec -it ${PROJECT}_node sh -c "cd app/backend/ && $COMMAND"

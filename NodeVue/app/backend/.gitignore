@@ -1,5 +1,4 @@
-docker-compose.yml
-mysql
+node_modules
 
 # Editor directories and files
 .vscode/*
