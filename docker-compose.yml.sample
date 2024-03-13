@@ -11,14 +11,16 @@ services:
       - "3000:3000"
       - "${API_PORT}:${API_PORT}"
       - "${CLIENT_PORT}:${CLIENT_PORT}"
+      - "${ADMIN_PORT}:${ADMIN_PORT}"
     environment:
       - PORT=3000
       - API_PORT=${API_PORT}
       - CLIENT_PORT=${CLIENT_PORT}
+      - ADMIN_PORT=${ADMIN_PORT}
       - PROJECT=${PROJECT}
     depends_on:
       - db
-    command: node ./startup/app.js
+    command: node ./startup/server.js
     volumes:
       - ./app:/app
       - ./startup:/startup
