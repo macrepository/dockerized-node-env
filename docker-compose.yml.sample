@@ -18,10 +18,10 @@ services:
       - PROJECT=${PROJECT}
     depends_on:
       - db
-    command: node ./public/app.js
+    command: node ./startup/app.js
     volumes:
       - ./app:/app
-      - ./public:/public
+      - ./startup:/startup
     networks:
       - ${PROJECT}
   db:
@@ -56,7 +56,7 @@ services:
     container_name: "${PROJECT}_deploy"
     volumes:
       - ./app:/app
-      - ./public:/public
+      - ./startup:/startup
     depends_on:
       - node
       - db
