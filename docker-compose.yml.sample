@@ -66,6 +66,3 @@ services:
 networks:
   custom_network:
     driver: bridge
-
-volumes:
-  mysql_data:
