@@ -19,6 +19,10 @@
 1. Configure the .env file and change the desired environment details.
 
    ```
+   cp .env.sample .env
+   ```
+
+   ```
    PROJECT=node
    API_PORT=3001
    CLIENT_PORT=5173
