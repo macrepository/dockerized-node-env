@@ -86,6 +86,9 @@
   ```
   ALTER USER '<your user>'@'%' IDENTIFIED WITH mysql_native_password BY '<your password>';
   ```
+  ```
+  make restart
+  ```
 * Create a test table for integration testing.
 
   ```
