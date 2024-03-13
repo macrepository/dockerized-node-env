@@ -1,5 +1,8 @@
 docker-compose.yml
 mysql/*
+app/api/*
+app/client/*
+app/admin/*
 
 # Editor directories and files
 .vscode/*
