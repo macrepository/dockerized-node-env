@@ -3,8 +3,8 @@
 source "${PWD}/.env"
 
 # Create database
-docker exec -it ${PROJECT}_mysql mysql -uroot -p"${MYSQL_PASSWORD}" -e "CREATE DATABASE \`${PROJECT}-test\`;"
+docker exec -it ${PROJECT}_mysql mysql -uroot -p"${MYSQL_PASSWORD}" -e "CREATE DATABASE \`${MYSQL_DATABASE}-test\`;"
 
 # Grant privileges
-docker exec -it ${PROJECT}_mysql mysql -uroot -p"${MYSQL_PASSWORD}" -e "GRANT ALL PRIVILEGES ON \`${PROJECT}-test\`.* TO '${MYSQL_USER}'@'%';"
+docker exec -it ${PROJECT}_mysql mysql -uroot -p"${MYSQL_PASSWORD}" -e "GRANT ALL PRIVILEGES ON \`${MYSQL_DATABASE}-test\`.* TO '${MYSQL_USER}'@'%';"
 docker exec -it ${PROJECT}_mysql mysql -uroot -p"${MYSQL_PASSWORD}" -e "FLUSH PRIVILEGES;"
