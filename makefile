@@ -8,6 +8,10 @@ build:
 	sed -i'' -e "s/custom_network/${PROJECT}/" docker-compose.yml
 	docker compose up -d
 test-startup:
+	@[ -d "app/api" ] || mkdir -p "app/api"
+	@[ -d "app/client" ] || mkdir -p "app/client"
+	@[ -d "app/admin" ] || mkdir -p "app/admin"
+	
 	cp startup/api.js app/api/app.js
 	cp startup/client.js app/client/app.js
 	cp startup/admin.js app/admin/app.js
